@@ -1,0 +1,30 @@
+mat-grid-tile {
+  &.document-tile {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: lightcyan;
+
+    &:hover {
+      background-color: #ceefef;
+      cursor: pointer;
+    }
+
+    mat-grid-tile-footer {
+      cursor: default;
+    }
+
+    &:last-of-type  mat-grid-tile-footer {
+      justify-content: space-around;
+    }
+  }
+
+  &.document-add .mat-icon {
+    transform: scale(5);
+  }
+}
+
+mat-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
