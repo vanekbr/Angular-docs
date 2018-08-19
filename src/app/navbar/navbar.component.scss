@@ -1,0 +1,25 @@
+.username-input {
+  margin-left: 5px;
+}
+
+.username {
+  padding: 0 10px;
+}
+
+.section-link {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  background-color: lightslategrey;
+  height: 100%;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: #4fa2d0;;
+  }
+
+  span {
+    display: inline-block;
+    padding: 4px 0;
+  }
+}

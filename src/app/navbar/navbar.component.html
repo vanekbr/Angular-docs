@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <a class="section-link" routerLink="/documents" routerLinkActive="active"><span>All documents</span></a>
+
+  <div class="username">
+    <span>Username:</span>
+    <ng-container *ngIf="usernameEditMode; else usernameView">
+      <mat-form-field class="username-input">
+        <input matInput #newName value="{{username}}">
+      </mat-form-field>
+      <button mat-icon-button color="white" (click)="updateUserName(newName.value)">
+        <mat-icon aria-label="Edit username">done</mat-icon>
+      </button>
+    </ng-container>
+    <ng-template #usernameView>
+      {{username}}
+      <button mat-icon-button color="white" (click)="usernameEditMode = true" *ngIf="username">
+        <mat-icon aria-label="Edit username">mode_edit</mat-icon>
+      </button>
+    </ng-template>
+  </div>
+</mat-toolbar>

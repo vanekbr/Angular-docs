@@ -1,0 +1,8 @@
+<div class="row columns">
+  <input type="text" id="message" #messageInput placeholder="Type message..." (keyup.control.enter)="sendMessage($event.target.value)" [(ngModel)]="userMessage"/>
+  <button mat-stroked-button (click)="sendMessage(messageInput.value)">Send</button>
+
+  <div class="chat-container" >
+    <div *ngFor="let item of items | async">{{ getUserName(item.authorId) | slice:0:6 }} ({{ item.posted | date:'shortTime' }}): {{ item.text }}</div>
+  </div>
+</div>

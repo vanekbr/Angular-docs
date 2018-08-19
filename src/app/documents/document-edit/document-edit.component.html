@@ -1,0 +1,24 @@
+<div class="document-header">
+  <span class="document-name" *ngIf="document">{{document.name}}</span>
+  <button mat-raised-button mat-warn
+          (click)="copyDocumentLink()" class="invitation-link">{{ invitationLinkText }}</button>
+</div>
+<div class="document-content">
+  <mat-drawer-container class="chat-container">
+    <div>Document chat</div>
+    <mat-drawer-content>
+      <app-chat [chatId]="document?.chatId"></app-chat>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+  <mat-drawer-container class="document-container">
+    <mat-drawer-content>
+      <div>
+        <mat-form-field class="document-text" *ngIf="document">
+          <textarea #documentText id="document-text-container" matInput [(ngModel)]='document.text' (click)="getCaretPos(documentText)" (keyup)="getCaretPos(documentText)" (keyup)="saveDocument()"></textarea>
+        </mat-form-field>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+
