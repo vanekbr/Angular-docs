@@ -1,11 +1,18 @@
+@import "../../../theme_variables";
+
 mat-grid-tile {
   &.document-tile {
-    border: 1px solid lightgrey;
+    border: 1px solid $primary-contrast;
     border-radius: 5px;
-    background-color: lightcyan;
+    background-color: $primary;
+    color: $primary-contrast;
+
+    a {
+      color: $primary-contrast;
+    }
 
     &:hover {
-      background-color: #ceefef;
+      background-color: $primary-light;
       cursor: pointer;
     }
 
@@ -13,9 +20,13 @@ mat-grid-tile {
       cursor: default;
     }
 
-    &:last-of-type  mat-grid-tile-footer {
+    &:last-of-type mat-grid-tile-footer {
       justify-content: space-around;
     }
+  }
+
+  &.new-document-tile {
+    background-color: $primary-light;
   }
 
   &.document-add .mat-icon {

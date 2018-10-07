@@ -1,19 +1,14 @@
-.chat-container {
-  width: 20%;
-  height: 100%;
-  float: left;
-}
+@import "../../../theme_variables";
 
 .document-container {
-  width: 80%;
-  padding-left: 50px;
+  width: 90%;
   float: right;
 }
 
 .document-header {
   height: 50px;
-  background-color: cornflowerblue;
-  color: white;
+  background-color: $light-blue;
+  color: $primary-contrast;
   text-align: center;
   border-radius: 5px;
   margin-bottom: 15px;
@@ -36,5 +31,23 @@
 
   textarea {
     min-height: 400px;
+    background-color: $primary-background;
   }
+}
+
+.document-sidenav-container {
+  min-height: 500px;
+  overflow: visible;
+}
+
+#toggle-chat {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+mat-sidenav {
+  overflow: visible;
+  background-color: $primary-background;
+  border-radius: 5px;
+  max-width: 20%;
 }

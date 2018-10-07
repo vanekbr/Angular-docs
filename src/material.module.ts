@@ -4,7 +4,7 @@ import {
   MatFormFieldModule,
   MatGridListModule,
   MatIconModule,
-  MatInputModule,
+  MatInputModule, MatListModule,
   MatProgressSpinnerModule, MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
@@ -19,6 +19,7 @@ import {
     MatInputModule,
     MatFormFieldModule,
     MatSidenavModule,
+    MatListModule,
   ],
   exports: [
     MatButtonModule,
@@ -29,6 +30,7 @@ import {
     MatInputModule,
     MatFormFieldModule,
     MatSidenavModule,
+    MatListModule,
   ],
 })
 export class MaterialModule { }

@@ -18,6 +18,7 @@ export class DocumentEditComponent implements OnInit {
   document: DocumentModel;
   caretPosition = 0;
   invitationLinkText = InvitationLinkText;
+  opened = false;
   @ViewChild('documentText') documentTextInput: HTMLInputElement;
 
   constructor(private route: ActivatedRoute,
