@@ -1,17 +1,16 @@
-# AngularDocs  
-  
+# AngularDocs
+
 Simple collaborative document editor.
-Based on angular-cli
-  
+
 ## Basic info
 Apllication uses auto-login feature to allow instantly start working.
 Used Firebase anonymous login
 Your username is system-wide, if you change it - it will be changed in all you chat messages across all documents.
-  
- 
- 
+
+
+
 ## Tslint additional rules
-Angular cli tslint rules are pretty good, but they were extended by:
+Tslint rules are pretty good, but they were extended by:
 
  - no-duplicate-imports (duplication is not good)
  - newline-before-return (easier to find and more structural code)
