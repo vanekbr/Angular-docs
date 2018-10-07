@@ -1,8 +1,12 @@
 <div class="row columns">
-  <input type="text" id="message" #messageInput placeholder="Type message..." (keyup.control.enter)="sendMessage($event.target.value)" [(ngModel)]="userMessage"/>
-  <button mat-stroked-button (click)="sendMessage(messageInput.value)">Send</button>
+  <mat-form-field class="example-form-field">
+    <input matInput type="text" #messageInput placeholder="Type message..." (keyup.control.enter)="sendMessage($event.target.value)" [(ngModel)]="userMessage"/>
+  </mat-form-field>
+  <button mat-stroked-button id="send-message" (click)="sendMessage(messageInput.value)">Send</button>
 
   <div class="chat-container" >
-    <div *ngFor="let item of items | async">{{ getUserName(item.authorId) | slice:0:6 }} ({{ item.posted | date:'shortTime' }}): {{ item.text }}</div>
+    <mat-list>
+      <mat-list-item *ngFor="let item of items | async">{{ getUserName(item.authorId) | slice:0:6 }} ({{ item.posted | date:'shortTime' }}): {{ item.text }}</mat-list-item>
+    </mat-list>
   </div>
 </div>

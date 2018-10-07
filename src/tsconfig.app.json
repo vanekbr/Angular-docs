@@ -8,5 +8,11 @@
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"
+  ],
+  "lint": [
+    {
+      "project": "src/tsconfig.json",
+      "exclude": "**/node_modules/**/*"
+    }
   ]
 }
